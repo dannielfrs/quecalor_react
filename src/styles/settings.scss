@@ -1,0 +1,256 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+@import "./mixins/mixins.scss";
+
+/* COLOR PALETTE */
+
+// scss-docs-start gray-color-variables 
+$white:    #fff    !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black:    #000    !default;
+// scss-docs-end gray-color-variables
+
+// scss-docs-start color-variables
+$blue:       #235291 !default;
+$dodgerblue: #1e90ff !default;
+$navy:       #282c62 !default;
+$indigo:     #6610f2 !default;
+$purple:     #6f42c1 !default;
+$pink:       #d63384 !default;
+$red:        #dc3545 !default;
+$orange:     #fd7e14 !default;
+$yellow:     #ffc107 !default;
+$green:      #198754 !default;
+$teal:       #20c997 !default;
+$cyan:       #0dcaf0 !default;
+// scss-docs-end color-variables
+
+// scss-docs-start blue-color-variables
+$blue-100: mix(white, $blue, 40%) !default;
+$blue-200: mix(white, $blue, 30%) !default;
+$blue-300: mix(white, $blue, 20%) !default;
+$blue-400: mix(white, $blue, 10%) !default;
+$blue-500: $blue !default;
+$blue-600: mix(black, $blue, 10%) !default;
+$blue-700: mix(black, $blue, 20%) !default;
+$blue-800: mix(black, $blue, 30%) !default;
+$blue-900: mix(black, $blue, 40%) !default;
+// scss-docs-end blue-color-variables
+
+// scss-docs-start navy-color-variables
+$navy-100: mix(white, $navy, 80%) !default;
+$navy-200: mix(white, $navy, 60%) !default;
+$navy-300: mix(white, $navy, 40%) !default;
+$navy-400: mix(white, $navy, 20%) !default;
+$navy-500: $navy !default;
+$navy-600: mix(black, $navy, 20%) !default;
+$navy-700: mix(black, $navy, 40%) !default;
+$navy-800: mix(black, $navy, 60%) !default;
+$navy-900: mix(black, $navy, 80%) !default;
+// scss-docs-end navy-color-variables
+
+// scss-docs-start orange-color-variables
+$orange-100: mix(white, $orange, 80%) !default;
+$orange-200: mix(white, $orange, 60%) !default;
+$orange-300: mix(white, $orange, 40%) !default;
+$orange-400: mix(white, $orange, 20%) !default;
+$orange-500: $orange !default;
+$orange-600: mix(black, $orange, 20%) !default;
+$orange-700: mix(black, $orange, 40%) !default;
+$orange-800: mix(black, $orange, 60%) !default;
+$orange-900: mix(black, $orange, 80%) !default;
+// scss-docs-end orange-color-variables
+
+// scss-docs-start yellow-color-variables
+$yellow-100: mix(white, $yellow, 80%) !default;
+$yellow-200: mix(white, $yellow, 60%) !default;
+$yellow-300: mix(white, $yellow, 40%) !default;
+$yellow-400: mix(white, $yellow, 20%) !default;
+$yellow-500: $yellow !default;
+$yellow-600: mix(black, $yellow, 20%) !default;
+$yellow-700: mix(black, $yellow, 40%) !default;
+$yellow-800: mix(black, $yellow, 60%) !default;
+$yellow-900: mix(black, $yellow, 80%) !default;
+// scss-docs-end yellow-color-variables
+
+// scss-docs-start cyan-color-variables
+$cyan-100: mix(white, $cyan, 80%) !default;
+$cyan-200: mix(white, $cyan, 60%) !default;
+$cyan-300: mix(white, $cyan, 40%) !default;
+$cyan-400: mix(white, $cyan, 20%) !default;
+$cyan-500: $cyan !default;
+$cyan-600: mix(black, $cyan, 20%) !default;
+$cyan-700: mix(black, $cyan, 40%) !default;
+$cyan-800: mix(black, $cyan, 60%) !default;
+$cyan-900: mix(black, $cyan, 80%) !default;
+// scss-docs-end cyan-color-variables
+
+// scss-docs-start theme-color-variables
+$primary:       $blue      !default;
+$secondary:     $gray-600  !default;
+$success:       $green     !default;
+$info:          $cyan      !default;
+$warning:       $yellow    !default;
+$danger:        $red       !default;
+$light:         $gray-100  !default;
+$dark:          $gray-900  !default;
+// scss-docs-end theme-color-variables
+
+// scss-docs-start bg-color-variables
+$bg-color-primary:       $blue;
+$bg-color-secondary:     $gray-600;
+$bg-color-footer:        $navy-900;
+$bg-color-navbar:        $blue-900;
+$bg-color-navbarSearch:  $blue-600;
+$bg-color-card:          $blue-400;
+$bg-color-light:         $gray-100;
+$bg-color-dark:          $gray-900;
+// scss-docs-end bg-color-variables
+
+// --bg-color-main: rgb(35, 82, 145);
+// --bg-color-second: rgb(82, 136, 206);
+// --bg-color-footer: rgb(29, 42, 53);
+// --bg-color-navbar: rgb(1, 62, 107);
+// --bg-color-navbarSearch: rgb(2, 85, 144);
+// --bg-color-card: rgb(53, 105, 173);
+
+// scss-docs-start color-variables
+$color-title:              $gray-200;
+$color-primary:            $gray-200;
+$color-secondary:          $gray-800;
+$color-dark-title:         $gray-800;
+$color-dark-primary:       $gray-900;
+$color-dark-secondary:     $gray-700;
+$color-nav:                $gray-100;
+$color-footer-title:       $gray-200;
+$color-footer-primary:     $gray-400;
+$color-footer-secondary:   $white;
+// scss-docs-end color-variables
+
+/* FONTS */
+
+$font-headline-1:  var(--font-headline-1);
+$font-headline-2:  var(--font-headline-2);
+$font-headline-3:  var(--font-headline-3);
+$font-headline-4:  var(--font-headline-4);
+$font-headline-5:  var(--font-headline-5);
+$font-headline-6:  var(--font-headline-6);
+$font-body-1:      var(--font-body-1 );
+$font-body-2:      var(--font-body-2 );
+$font-body-3:      var(--font-body-3 );
+$font-label-1:     var(--font-label-1);
+
+/* GLOBAL PROPERTIES */
+
+$transition-cubic:  cubic-bezier(0.175, 0.885, 0.32, 1.275);
+$navbar-height:     65px;
+
+:root {
+
+  /* FONTS */
+
+  /* font: font-style font-variant font-weight font-size/line-height font-family */
+
+  --font-headline-1: normal normal 300 60px / normal "Roboto", sans-serif;
+  --font-headline-2: normal normal normal 50px / normal "Roboto", sans-serif;
+  --font-headline-3: normal normal normal 35px / normal "Roboto", sans-serif;
+  --font-headline-4: normal normal normal 20px / normal "Roboto", sans-serif;
+  --font-headline-5: normal normal 400 16px / normal "Roboto", sans-serif;
+  --font-headline-6: normal normal normal 14px / normal "Roboto", sans-serif;
+  --font-body-1:     normal normal normal 17px / 23px "Roboto", sans-serif;
+  --font-body-2:     normal normal normal 15px / normal "Roboto", sans-serif;
+  --font-body-3:     normal normal normal 12px / normal "Roboto", sans-serif;
+  --font-label-1:    normal normal 600 13px / normal "Roboto", sans-serif;
+
+  @include small-screen() {
+    --font-headline-1: normal normal 300 40px / normal "Roboto", sans-serif;
+    --font-headline-2: normal normal normal 35px / normal "Roboto", sans-serif;
+    --font-headline-3: normal normal normal 30px / normal "Roboto", sans-serif;
+    --font-headline-4: normal normal normal 20px / normal "Roboto", sans-serif;
+    --font-headline-5: normal normal 400 16px / normal "Roboto", sans-serif;
+    --font-headline-6: normal normal normal 14px / normal "Roboto", sans-serif;
+    --font-body-1:     normal normal normal 15px / 23px "Roboto", sans-serif;
+    --font-body-2:     normal normal normal 13px / normal "Roboto", sans-serif;
+    --font-body-3:     normal normal normal 12px / normal "Roboto", sans-serif;
+    --font-label-1:    normal normal 600 13px / normal "Roboto", sans-serif;
+  }
+
+  /* BUTTONS */
+
+  /* btn-css-vars */
+
+  --btn-padding-x: 0.75rem;
+  --btn-padding-y: 0.375rem;
+  --btn-font-family: null;
+  --btn-font-size: 1rem;
+  --btn-font-weight: 400;
+  --btn-line-height: 1.5;
+  --btn-color: rgb(228, 228, 228);
+  --btn-bg: transparent;
+  --btn-border-width: 1px;
+  --btn-border-color: transparent;
+  --btn-border-radius: 0.375rem;
+  --btn-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
+  --btn-disabled-opacity: 0.65;
+  --btn-focus-box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.5);
+  --btn-hover-color: rgb(228, 228, 228);
+  --btn-hover-bg: rgb(10, 10, 10);
+  --btn-hover-border-color: rgb(10, 10, 10);
+
+  --btn-primary-color: #fff;
+  --btn-primary-bg: #0d6efd;
+  --btn-primary-border-color: #0d6efd;
+  --btn-primary-hover-color: #fff;
+  --btn-primary-hover-bg: #0b5ed7;
+  --btn-primary-hover-border-color: #0a58ca;
+  --btn-primary-focus-shadow-rgb: 49, 132, 253;
+  --btn-primary-active-color: #fff;
+  --btn-primary-active-bg: #0a58ca;
+  --btn-primary-active-border-color: #0a53be;
+  --btn-primary-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --btn-primary-disabled-color: #fff;
+  --btn-primary-disabled-bg: #0d6efd;
+  --btn-primary-disabled-border-color: #0d6efd;
+
+  --btn-secondary-color: #fff;
+  --btn-secondary-bg: #6c757d;
+  --btn-secondary-border-color: #6c757d;
+  --btn-secondary-hover-color: #fff;
+  --btn-secondary-hover-bg: #5c636a;
+  --btn-secondary-hover-border-color: #565e64;
+  --btn-secondary-focus-shadow-rgb: 130, 138, 145;
+  --btn-secondary-active-color: #fff;
+  --btn-secondary-active-bg: #565e64;
+  --btn-secondary-active-border-color: #51585e;
+  --btn-secondary-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --btn-secondary-disabled-color: #fff;
+  --btn-secondary-disabled-bg: #6c757d;
+  --btn-secondary-disabled-border-color: #6c757d;
+
+  /* FORMS */
+
+  /* Inputs */
+
+  --input-padding-y: 0.6rem;
+  --input-padding-x: 0.75rem;
+  --input-font: var(--font-body-1);
+  --input-color: var(--color-second);
+  --input-bg: rgb(255, 255, 255);
+  --input-border-width: 1px;
+  --input-border-color: #ced4da;
+  --input-focus-color: #212529;
+  --input-focus-bg: rgb(255, 255, 255);
+  --input-focus-border-color: #56a1ec;
+  --input-focus-box-shadow: 0 0 0 0.25rem #a9c6e6;
+  --input-placeholder-color: #6c757d;
+  --input-disabled-color: rgb(82, 82, 82);
+  --input-disabled-bg: rgb(223, 223, 223);
+  --input-disabled-border-color: rgb(82, 82, 82);
+}

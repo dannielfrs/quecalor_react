@@ -1,0 +1,56 @@
+@import "../../styles/mixins/mixins.scss";
+@import "../../styles/settings.scss";
+
+$bg-color: $bg-color-navbarSearch;
+$color-navbar: $color-nav;
+$navbar-height: $navbar-height;
+
+.navbar {
+    color: $color-navbar;
+    background-color: $bg-color;
+    position: fixed;
+    top: $navbar-height;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 50px;
+    z-index: 9;
+    transition: 1s;
+
+    &_container {
+        display: flex;
+        justify-content: center;
+        width: 75%;
+    }
+
+    &_item {
+        margin: 0 10px;
+        display: flex;
+        align-items: center;
+    }
+}
+
+/* LARGE SCREEN */
+
+@include large-screen() {
+}
+
+/* MEDIUM SCREEN */
+
+@include medium-screen() {
+    .navbar {
+        &_item {
+            margin: 20px 0;
+        }
+    }
+}
+
+/* SMALL SCREEN */
+
+@include small-screen() {
+}
+
+/* EXTRA SMALL SCREEN */
+
+@include extra-small-screen() {
+}

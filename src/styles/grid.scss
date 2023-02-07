@@ -1,0 +1,92 @@
+@import "./mixins/mixins.scss";
+
+.container {
+    display: flex;
+    width: 70%;
+    margin: auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+[class*="col-"] {
+    padding: 0px 0px;
+}
+
+@for $i from 1 through 12 {
+    .col-#{$i} {
+        width: calc((100% / 12) * #{$i});
+    }
+}
+
+@for $i from 1 through 6 {
+    .p-#{$i} {
+        padding: calc(5px * #{$i});
+    }
+}
+
+@for $i from 1 through 6 {
+    .m-#{$i} {
+        margin: calc(5px * #{$i});
+    }
+}
+
+/* LARGE SCREEN */
+
+@include large-screen() {
+
+    .container {
+        width: 90%;
+    }
+
+    @for $i from 1 through 12 {
+        .col-lg-#{$i} {
+            width: calc((100% / 12) * #{$i});
+        }
+    }
+}
+
+/* MEDIUM SCREEN */
+
+@include medium-screen() {
+
+    @for $i from 1 through 12 {
+        .col-md-#{$i} {
+            width: calc((100% / 12) * #{$i});
+        }
+    }
+}
+
+/* SMALL SCREEN */
+
+@include small-screen() {
+
+    .container {
+        width: 100%;
+    }
+
+    @for $i from 1 through 12 {
+        .col-sm-#{$i} {
+            width: calc((100% / 12) * #{$i});
+        }
+    }
+
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0px;
+    }
+}
+
+/* EXTRA SMALL SCREEN */
+
+@include extra-small-screen() {
+
+    @for $i from 1 through 12 {
+        .col-xs-#{$i} {
+            width: calc((100% / 12) * #{$i});
+        }
+    }
+}

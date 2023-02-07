@@ -1,0 +1,113 @@
+@import "../../styles/mixins/mixins.scss";
+@import "../../styles/settings.scss";
+
+$bg-color: $bg-color-card;
+$bg-color-button-hover: $bg-color-secondary;
+$bg-color-tooltip: $bg-color-dark;
+$color-tooltip: $color-primary;
+$font-title: $font-headline-3;
+$font-body: $font-body-1;
+$font-temp: $font-headline-2;
+$font-unit: $font-headline-3;
+$font-detailSpan: $font-body-3;
+
+.card {
+    background-color: $bg-color;
+    border-radius: 5px;
+    font: $font-body;
+    padding: 15px;
+    width: 100%;
+
+
+    &_header {
+        display: flex;
+        padding: 10px 0px;
+        font: $font-title;
+        align-items: center;
+
+        & button {
+            font: $font-body;
+            border-radius: 20px;
+            padding: 0 5px;
+            margin-left: 10px;
+            position: relative;
+            transition: 0.5s;
+
+            &:hover {
+                background-color: mix(black, $bg-color, 20%);
+
+                &:after {
+                    content: "Guardar ubicación";
+                    font-family: Arial;
+                    position: absolute;
+                    top: 130%;
+                    left: -50%;
+                    width: 150px;
+                    background-color: $bg-color-tooltip;
+                    color: white;
+                    transition: 0.5s;
+                }
+
+            }
+        }
+    }
+
+    &_body {
+        display: flex;
+        align-items: center;
+        margin: 10px 0px;
+
+        & img {
+            width: 60px;
+            height: 60px;
+        }
+
+        & div {
+            margin-left: 20px;
+
+        }
+
+        & span {
+            font: $font-unit;
+            padding-bottom: 10px;
+        }
+    }
+
+    &_temp {
+        font: $font-temp;
+    }
+
+    &_description {
+        font-weight: bold;
+    }
+
+    &_description:first-letter {
+        text-transform: uppercase;
+    }
+
+    &_footer>div {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    &_detailItem>span {
+        text-transform: uppercase;
+        font: $font-detailSpan;
+    }
+}
+
+/* LARGE SCREEN */
+
+@include large-screen() {}
+
+/* MEDIUM SCREEN */
+
+@include medium-screen() {}
+
+/* SMALL SCREEN */
+
+@include small-screen() {}
+
+/* EXTRA SMALL SCREEN */
+
+@include extra-small-screen() {}

@@ -1,0 +1,21 @@
+[
+    {"icon": "01d","url": "/quecalor/images/weatherIcons/SunnyDay.svg"},
+    {"icon": "02d","url": "/quecalor/images/weatherIcons/PartlyCloudyDay.svg"},
+    {"icon": "03d","url": "/quecalor/images/weatherIcons/Cloudy.svg"},
+    {"icon": "04d","url": "/quecalor/images/weatherIcons/Cloudy.svg"},
+    {"icon": "09d","url": "/quecalor/images/weatherIcons/ModerateRain.svg"},
+    {"icon": "10d","url": "/quecalor/images/weatherIcons/RainShowersDay.svg"},
+    {"icon": "11d","url": "/quecalor/images/weatherIcons/Thunderstorms.svg"},
+    {"icon": "13d","url": "/quecalor/images/weatherIcons/SnowShowersDay.svg"},
+    {"icon": "50d","url": "/quecalor/images/weatherIcons/Mist.svg"},
+    {"icon": "01n","url": "/quecalor/images/weatherIcons/ClearNight.svg"},
+    {"icon": "02n","url": "/quecalor/images/weatherIcons/PartlyCloudyNight.svg"},
+    {"icon": "03n","url": "/quecalor/images/weatherIcons/Cloudy.svg"},
+    {"icon": "04n","url": "/quecalor/images/weatherIcons/Cloudy.svg"},
+    {"icon": "09n","url": "/quecalor/images/weatherIcons/ModerateRain.svg"},
+    {"icon": "10n","url": "/quecalor/images/weatherIcons/RainShowersNight.svg"},
+    {"icon": "11n","url": "/quecalor/images/weatherIcons/Thunderstorms.svg"},
+    {"icon": "13n","url": "/quecalor/images/weatherIcons/SnowShowersNight.svg"},
+    {"icon": "50n","url": "/quecalor/images/weatherIcons/Mist.svg"}
+]
+

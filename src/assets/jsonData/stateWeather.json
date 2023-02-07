@@ -1,0 +1,43 @@
+{
+    "base": "stations",
+    "clouds": {
+        "all": 0
+    },
+    "cod": 200,
+    "coord": {
+        "lon": -102.3,
+        "lat": 21.8833
+    },
+    "dt": 1667103171,
+    "id": 4019233,
+    "main": {
+        "feels_like": 12.28,
+        "humidity": 33,
+        "pressure": 1025,
+        "temp": 13.97,
+        "temp_max": 0,
+        "temp_min": 0
+    },
+    "name": "Aguascalientes",
+    "sys": {
+        "country": "MX",
+        "id": 7109,
+        "sunrise": 1667047877,
+        "sunset": 1667088860,
+        "type": 1
+    },
+    "timezone": -18000,
+    "visibility": 10000,
+    "weather": [
+        {
+            "description": "clear sky",
+            "icon": "01n",
+            "id": 800,
+            "main": "Clear"
+        }
+    ],
+    "wind": {
+        "deg": 150,
+        "speed": 1.54
+    }
+}

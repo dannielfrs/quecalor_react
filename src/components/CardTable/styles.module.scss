@@ -1,0 +1,65 @@
+@import "../../styles/mixins/mixins.scss";
+@import "../../styles/settings.scss";
+
+$bg-color: $bg-color-card;
+$font-body: $font-body-1;
+
+.card {
+    background-color: $bg-color;
+    border-radius: 5px;
+    padding: 10px;
+    font: $font-body;
+
+    &_body {
+        text-align: center;
+        margin: 10px 0px;
+    }
+
+    &_table {
+        width: 100%;
+    }
+
+    & tr {
+        text-align: start;
+
+        & td:first-child {
+            width: 7%;
+        }
+
+        & td:nth-child(2) {
+            width: 65%;
+        }
+    }
+
+    &_iconTempHigh {
+        color: $yellow-300;
+    }
+
+    &_iconTempLow {
+        color: $cyan-300;
+    }
+
+    &_iconSun {
+        color: $orange-300;
+    }
+
+    &_iconMoon {
+        color: $gray-500;
+    }
+}
+
+/* LARGE SCREEN */
+
+@include large-screen() {}
+
+/* MEDIUM SCREEN */
+
+@include medium-screen() {}
+
+/* SMALL SCREEN */
+
+@include small-screen() {}
+
+/* EXTRA SMALL SCREEN */
+
+@include extra-small-screen() {}

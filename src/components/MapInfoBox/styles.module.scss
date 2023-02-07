@@ -1,0 +1,52 @@
+@import "../../styles/mixins/mixins.scss";
+@import "../../styles/settings.scss";
+
+$bg-color: $bg-color-light;
+$color-body: $color-secondary;
+$font-body: $font-body-3;
+
+.mapInfoBox {
+    display: flex;
+    width: 150px;
+    overflow: hidden;
+    color: $color-body;
+    font: $font-body;
+
+    &_icon {
+        display: flex;
+        background-color: transparent;
+        // width: 40%;
+        padding: 0 2px;
+
+        & img {
+            width: 30px;
+        }
+    }
+
+    &_body {
+        display: flex;
+        flex-direction: column;
+        background-color: $bg-color;
+        height: 100%;
+        border-radius: 3px;
+        padding: 3px;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+/* LARGE SCREEN */
+
+@include large-screen() {}
+
+/* MEDIUM SCREEN */
+
+@include medium-screen() {}
+
+/* SMALL SCREEN */
+
+@include small-screen() {}
+
+/* EXTRA SMALL SCREEN */
+
+@include extra-small-screen() {}

@@ -1,0 +1,124 @@
+@import "../../styles/mixins/mixins.scss";
+@import "../../styles/settings.scss";
+
+$font-title: $font-headline-3;
+$font-body: $font-body-1;
+$font-temp: $font-headline-2;
+$font-unit: $font-headline-3;
+
+.slideshow {
+    position: relative;
+    width: 100%;
+    height: 170px;
+    overflow: hidden;
+
+    &_container {
+        display: flex;
+        flex-wrap: nowrap;
+        height: 100%;
+    }
+
+    &_slide {
+        min-width: 100%;
+        transition: 0.3s ease all;
+        position: relative;
+    }
+
+    &_slidetext {
+        width: 100%;
+        padding: 10px 60px;
+        text-align: center;
+        position: absolute;
+        bottom: 0;
+
+        @media screen and (max-width: 700px) {
+            position: relative;
+            background: #000;
+        }
+    }
+
+    &_controls {
+        position: absolute;
+        top: 0;
+        z-index: 20;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &_button {
+        pointer-events: all;
+        background: none;
+        border: none;
+        cursor: pointer;
+        outline: none;
+        width: 50px;
+        height: 100%;
+        text-align: center;
+        transition: 0.3s ease all;
+    }
+}
+
+.card {
+    background-color: rgb(127, 204, 255);
+    border-radius: 5px;
+    padding: 15px;
+    width: 100%;
+    height: 100%;
+    font: $font-body;
+
+    &_header {
+        padding: 10px 0px;
+        font: $font-title;
+    }
+
+    &_body {
+        display: flex;
+        align-items: center;
+        margin: 10px 0px;
+
+        & img {
+            width: 60px;
+            height: 60px;
+        }
+
+        & div {
+            margin-left: 10px;
+        }
+
+        & span {
+            font: $font-unit;
+        }
+    }
+
+    &_temp {
+        font: $font-temp;
+        padding-top: 10px;
+    }
+
+    &_description:first-letter {
+        text-transform: uppercase;
+    }
+}
+
+/* LARGE SCREEN */
+
+@include large-screen() {
+}
+
+/* MEDIUM SCREEN */
+
+@include medium-screen() {
+}
+
+/* SMALL SCREEN */
+
+@include small-screen() {
+}
+
+/* EXTRA SMALL SCREEN */
+
+@include extra-small-screen() {
+}

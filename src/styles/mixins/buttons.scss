@@ -1,0 +1,104 @@
+@mixin btn($variant: "default") {
+    $btn-color: null;
+    $btn-bg: null;
+    $btn-border-color: null;
+    $btn-hover-color: null;
+    $btn-hover-bg: null;
+    $btn-hover-border-color: null;
+    $btn-focus-shadow-rgb: null;
+    $btn-active-color: null;
+    $btn-active-bg: null;
+    $btn-active-border-color: null;
+    $btn-active-shadow: null;
+    $btn-disabled-color: null;
+    $btn-disabled-bg: null;
+    $btn-disabled-border-color: null;
+
+    @if $variant == "primary" {
+        $btn-color: var(--btn-primary-color);
+        $btn-bg: var(--btn-primary-bg);
+        $btn-border-color: var(--btn-primary-border-color);
+        $btn-hover-color: var(--btn-primary-hover-color);
+        $btn-hover-bg: var(--btn-primary-hover-bg);
+        $btn-hover-border-color: var(--btn-primary-hover-border-color);
+        $btn-focus-shadow-rgb: var(--btn-primary-focus-shadow-rgb);
+        $btn-active-color: var(--btn-primary-active-color);
+        $btn-active-bg: var(--btn-primary-active-bg);
+        $btn-active-border-color: var(--btn-primary-active-border-color);
+        $btn-active-shadow: var(--btn-primary-active-shadow);
+        $btn-disabled-color: var(--btn-primary-disabled-color);
+        $btn-disabled-bg: var(--btn-primary-disabled-bg);
+        $btn-disabled-border-color: var(--btn-primary-disabled-border-color);
+    } @else if $variant == "secondary" {
+        $btn-color: var(--btn-secondary-color);
+        $btn-bg: var(--btn-secondary-bg);
+        $btn-border-color: var(--btn-secondary-border-color);
+        $btn-hover-color: var(--btn-secondary-hover-color);
+        $btn-hover-bg: var(--btn-secondary-hover-bg);
+        $btn-hover-border-color: var(--btn-secondary-hover-border-color);
+        $btn-focus-shadow-rgb: var(--btn-secondary-focus-shadow-rgb);
+        $btn-active-color: var(--btn-secondary-active-color);
+        $btn-active-bg: var(--btn-secondary-active-bg);
+        $btn-active-border-color: var(--btn-secondary-active-border-color);
+        $btn-active-shadow: var(--btn-secondary-active-shadow);
+        $btn-disabled-color: var(--btn-secondary-disabled-color);
+        $btn-disabled-bg: var(--btn-secondary-disabled-bg);
+        $btn-disabled-border-color: var(--btn-secondary-disabled-border-color);
+    } @else if $variant == "default" {
+        $btn-color: var(--btn-color);
+        $btn-bg: var(--btn-bg);
+        $btn-border-color: var(--btn-border-color);
+        $btn-hover-color: var(--btn-hover-color);
+        $btn-hover-bg: var(--btn-hover-bg);
+        $btn-hover-border-color: var(--btn-hover-border-color);
+        $btn-focus-shadow-rgb: var(--btn-focus-shadow-rgb);
+        $btn-active-color: var(--btn-active-color);
+        $btn-active-bg: var(--btn-active-bg);
+        $btn-active-border-color: var(--btn-active-border-color);
+        $btn-active-shadow: var(--btn-active-shadow);
+        $btn-disabled-color: var(--btn-disabled-color);
+        $btn-disabled-bg: var(--btn-disabled-bg);
+        $btn-disabled-border-color: var(--btn-disabled-border-color);
+    }
+
+    display: inline-block;
+    padding: var(--btn-padding-y) var(--btn-padding-x);
+    font: var(--font-headline-5);
+    color: $btn-color;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    border: var(--btn-border-width) solid $btn-border-color;
+    border-radius: var(--btn-border-radius);
+    background-color: $btn-bg;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+        box-shadow 0.15s ease-in-out;
+
+    &:hover {
+        color: $btn-hover-color;
+        text-decoration: none;
+        background-color: $btn-hover-bg;
+        border-color: $btn-hover-border-color;
+    }
+
+    &:focus {
+        box-shadow: 0 0 0 2px rgb($btn-focus-shadow-rgb);
+    }
+
+    &.active {
+        color: $btn-active-color;
+        background-color: $btn-active-bg;
+        border-color: $btn-active-border-color;
+        box-shadow: $btn-active-shadow;
+    }
+
+    &.disabled {
+        color: $btn-disabled-color;
+        background-color: $btn-disabled-bg;
+        border-color: $btn-disabled-border-color;
+    }
+}
